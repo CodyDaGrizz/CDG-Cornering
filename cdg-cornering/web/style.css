@@ -1,0 +1,47 @@
+:root{
+  --bg: rgba(10,12,16,0.78);
+  --bg2: rgba(18,22,28,0.88);
+  --stroke: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.62);
+  --accent: #20D7B7;
+  --shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+*{box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0;overflow:hidden;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;}
+body{background: transparent; display:flex; align-items:center; justify-content:center;}
+.hidden{display:none}
+#root{width:100%;height:100%; display:flex; align-items:center; justify-content:center;}
+.panel{
+  width: 420px;
+  border-radius: 18px;
+  background: linear-gradient(180deg,var(--bg), var(--bg2));
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  backdrop-filter: blur(10px);
+  transform: translateY(8px);
+  animation: in 120ms ease-out forwards;
+}
+@keyframes in{to{transform: translateY(0)}}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.title{font-size:18px;font-weight:700;letter-spacing:0.2px;color:var(--text)}
+.pill{font-size:12px;color:var(--muted);border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)}
+.key{color:var(--accent);font-weight:700}
+.card{border:1px solid var(--stroke);border-radius:16px;padding:14px;background:rgba(255,255,255,0.03)}
+.row{display:flex;align-items:baseline;justify-content:space-between;margin:6px 0}
+.label{font-size:12px;color:var(--muted)}
+.value{font-size:14px;color:var(--text);font-weight:650}
+.divider{height:1px;background:var(--stroke);margin:10px 0}
+.total .value{color:var(--accent)}
+.big{font-size:20px}
+.actions{display:flex;gap:10px;margin-top:12px}
+.btn{flex:1;border-radius:14px;border:1px solid var(--stroke);padding:12px 12px;font-weight:700;color:var(--text);background:rgba(255,255,255,0.03);cursor:pointer;transition:120ms}
+.btn:hover{transform:translateY(-1px);border-color: rgba(32,215,183,0.35)}
+.primary{background: rgba(32,215,183,0.14);border-color: rgba(32,215,183,0.35)}
+.primary:hover{background: rgba(32,215,183,0.20)}
+.ghost:hover{background: rgba(255,255,255,0.06)}
+.btnKey{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 6px;border-radius:8px;margin-right:8px;border:1px solid var(--stroke);color:var(--accent);background:rgba(0,0,0,0.18)}
+.footer{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+.hint{font-size:12px;color:var(--muted)}
+.brand{font-size:12px;color:rgba(255,255,255,0.25);font-weight:800;letter-spacing:2px}

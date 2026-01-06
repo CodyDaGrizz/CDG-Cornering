@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cornering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root" class="hidden">
+    <div class="panel">
+      <div class="header">
+        <div class="title">Offer</div>
+        <div class="pill">Press <span class="key">E</span> to Accept</div>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <div class="label">Customer wants</div>
+          <div id="want" class="value">--</div>
+        </div>
+        <div class="row">
+          <div class="label">Unit price</div>
+          <div id="unit" class="value">--</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row total">
+          <div class="label">Total</div>
+          <div id="total" class="value big">--</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="accept" class="btn primary">
+          <span class="btnKey">E</span>
+          Accept
+        </button>
+        <button id="decline" class="btn ghost">
+          <span class="btnKey">⌫</span>
+          Decline
+        </button>
+      </div>
+
+      <div class="footer">
+        <div class="hint">Backspace to Decline</div>
+        <div class="brand">CDG</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
